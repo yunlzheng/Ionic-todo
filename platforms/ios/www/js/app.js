@@ -35,22 +35,10 @@ angular.module('todo', ['ionic'])
         }
     })
     .controller('TodoCtrl', ["$scope", "$timeout" ,"$ionicModal", "$ionicSideMenuDelegate", "Projects", function($scope, $timeout, $ionicModal, $ionicSideMenuDelegate, Projects) {
-        $scope.itemButtons = [
-            {
-                text: 'Edit',
-                type: 'Button',
-                onTap: function(item) {
-                    alert('Edit Item: ' + item.id);
-                }
-            },
-            {
-                text: 'Share',
-                type: 'Button',
-                onTap: function(item) {
-                    alert('Share Item: ' + item.id);
-                }
-            }
-        ];
+
+        $scope.data = {
+            showDelete: false
+        };
 
         // A utility function for creating a new project
         // with the given projectTitle
@@ -132,13 +120,45 @@ angular.module('todo', ['ionic'])
             }
         });
 
+        $scope.optionButtons = [
+            {
+                text: 'Done',
+                type: 'button-assertive ',
+                onTap: function(task) {
+                    CompletedTask(task);
+                }
+            },
+            {
+                text: 'Clean',
+                type: 'Button',
+                onTap: function(task) {
+                    CleanTask(task);
+                }
+            }
+        ];
+
         // Handler Task List Delete
         $scope.onTaskDelete = function(item) {
             $scope.activeProject.tasks.splice($scope.activeProject.tasks.indexOf(item), 1);
-        }
+            // Inefficient, but save all the projects
+            Projects.save($scope.projects);
+        };
 
-        $scope.reordering = function() {
+        function CompletedTask(task) {
+            task.complete = !task.complete;
+            Projects.save($scope.projects);
+        };
 
-        }
+        function CleanTask(task) {
+            $scope.activeProject.tasks.splice($scope.activeProject.tasks.indexOf(task), 1);
+            // Inefficient, but save all the projects
+            Projects.save($scope.projects);
+        };
+
+        $scope.onMoveTask = function(item, fromIndex, toIndex) {
+            $scope.activeProject.tasks.splice(fromIndex, 1);
+            $scope.activeProject.tasks.splice(toIndex, 0, item);
+        };
+
 
     }]);
