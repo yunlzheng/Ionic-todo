@@ -140,6 +140,8 @@ angular.module('todo', ['ionic'])
         // Handler Task List Delete
         $scope.onTaskDelete = function(item) {
             $scope.activeProject.tasks.splice($scope.activeProject.tasks.indexOf(item), 1);
+            // Inefficient, but save all the projects
+            Projects.save($scope.projects);
         };
 
         $scope.onTaskShare = function(item) {
