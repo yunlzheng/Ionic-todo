@@ -122,17 +122,17 @@ angular.module('todo', ['ionic'])
 
         $scope.optionButtons = [
             {
-                text: 'Edit',
+                text: 'Done',
                 type: 'button-assertive ',
-                onTap: function(item) {
-                    alert('Edit Item: ' + item.id);
+                onTap: function(task) {
+                    CompletedTask(task);
                 }
             },
             {
-                text: 'Share',
+                text: 'Clean',
                 type: 'Button',
-                onTap: function(item) {
-                    alert('Share Item: ' + item.id);
+                onTap: function(task) {
+                    CleanTask(task);
                 }
             }
         ];
@@ -144,12 +144,15 @@ angular.module('todo', ['ionic'])
             Projects.save($scope.projects);
         };
 
-        $scope.onTaskShare = function(item) {
-
+        function CompletedTask(task) {
+            task.complete = !task.complete;
+            Projects.save($scope.projects);
         };
 
-        $scope.onTaskEdit = function(item) {
-
+        function CleanTask(task) {
+            $scope.activeProject.tasks.splice($scope.activeProject.tasks.indexOf(task), 1);
+            // Inefficient, but save all the projects
+            Projects.save($scope.projects);
         };
 
         $scope.onMoveTask = function(item, fromIndex, toIndex) {
