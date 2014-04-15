@@ -24,14 +24,18 @@
                 </button>
                 <h1 class="title">{{activeProject.title}}</h1>
                 <!-- New Task button-->
-                <button class="button button-icon" ng-click="newTask()">
-                    <i class="icon ion-compose"></i>
-                </button>
+                <div class="buttons">
+                    <button class="button button-icon" ng-click="newTask()">
+                        <i class="icon ion-compose"></i>
+                    </button>
+                    <button class="button button-icon icon ion-ios7-minus-outline" ng-click="showDelete=!showDelete"></button>
+                </div>
             </ion-header-bar>
             <ion-content scroll="false">
                 <!-- our list and list items -->
-                <ion-list can-delete="true" can-reorder="true" show-delete="true" on-delete="onTaskDelete(item)">
-                    <ion-item class="item item-icon-right" ng-repeat="task in activeProject.tasks" item="task" option-buttons="itemButtons">
+                <ion-list can-delete="true" show-delete="showDelete" on-delete="onTaskDelete(item)">
+                    <ion-item class="item item-icon-right" ng-repeat="task in activeProject.tasks" item="task"
+                              option-buttons="itemButtons">
                         {{task.title}}
                     </ion-item>
                 </ion-list>

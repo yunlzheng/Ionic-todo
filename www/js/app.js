@@ -137,4 +137,8 @@ angular.module('todo', ['ionic'])
             $scope.activeProject.tasks.splice($scope.activeProject.tasks.indexOf(item), 1);
         }
 
+        $scope.reordering = function() {
+
+        }
+
     }]);
