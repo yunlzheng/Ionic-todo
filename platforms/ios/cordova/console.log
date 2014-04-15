@@ -1,0 +1,32 @@
+2014-04-15 13:04:26.980 HelloCordova[1420:70b] Multi-tasking -> Device: YES, App: YES
+2014-04-15 13:04:27.002 HelloCordova[1420:70b] Unlimited access to network resources
+2014-04-15 13:04:27.211 HelloCordova[1420:70b] [CDVTimer][statusbar] 58.963001ms
+2014-04-15 13:04:27.211 HelloCordova[1420:70b] [CDVTimer][TotalPluginStartup] 59.460998ms
+2014-04-15 13:04:27.309 HelloCordova[1420:70b] Resetting plugins due to page load.
+2014-04-15 13:04:27.536 HelloCordova[1420:70b] Finished load of: file:///Users/ylzheng/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/36F80169-3018-419B-8B90-E1C5456B392F/HelloCordova.app/www/index.html#/tab/dash
+Terminating in response to SpringBoard's termination.
+2014-04-15 13:20:46.386 HelloCordova[1851:70b] Multi-tasking -> Device: YES, App: YES
+2014-04-15 13:20:46.393 HelloCordova[1851:70b] Unlimited access to network resources
+2014-04-15 13:20:46.415 HelloCordova[1851:70b] [CDVTimer][statusbar] 7.057011ms
+2014-04-15 13:20:46.415 HelloCordova[1851:70b] [CDVTimer][TotalPluginStartup] 7.466018ms
+2014-04-15 13:20:46.495 HelloCordova[1851:70b] Resetting plugins due to page load.
+2014-04-15 13:20:46.616 HelloCordova[1851:70b] Finished load of: file:///Users/ylzheng/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/36F80169-3018-419B-8B90-E1C5456B392F/HelloCordova.app/www/index.html
+2014-04-15 14:14:53.642 HelloCordova[2117:70b] Multi-tasking -> Device: YES, App: YES
+2014-04-15 14:14:53.647 HelloCordova[2117:70b] Unlimited access to network resources
+2014-04-15 14:14:53.665 HelloCordova[2117:70b] [CDVTimer][statusbar] 4.774034ms
+2014-04-15 14:14:53.665 HelloCordova[2117:70b] [CDVTimer][TotalPluginStartup] 5.089998ms
+2014-04-15 14:14:53.736 HelloCordova[2117:70b] Resetting plugins due to page load.
+2014-04-15 14:14:53.819 HelloCordova[2117:70b] Finished load of: file:///Users/ylzheng/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/36F80169-3018-419B-8B90-E1C5456B392F/HelloCordova.app/www/index.html
+2014-04-15 14:19:14.880 HelloCordova[2315:70b] Multi-tasking -> Device: YES, App: YES
+2014-04-15 14:19:14.887 HelloCordova[2315:70b] Unlimited access to network resources
+2014-04-15 14:19:14.909 HelloCordova[2315:70b] [CDVTimer][statusbar] 5.212963ms
+2014-04-15 14:19:14.910 HelloCordova[2315:70b] [CDVTimer][TotalPluginStartup] 5.519986ms
+2014-04-15 14:19:15.009 HelloCordova[2315:70b] Resetting plugins due to page load.
+2014-04-15 14:19:15.134 HelloCordova[2315:70b] Finished load of: file:///Users/ylzheng/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/36F80169-3018-419B-8B90-E1C5456B392F/HelloCordova.app/www/index.html
+2014-04-15 14:52:17.403 HelloCordova[2572:70b] Multi-tasking -> Device: YES, App: YES
+2014-04-15 14:52:17.409 HelloCordova[2572:70b] Unlimited access to network resources
+2014-04-15 14:52:17.432 HelloCordova[2572:70b] [CDVTimer][statusbar] 7.094026ms
+2014-04-15 14:52:17.433 HelloCordova[2572:70b] [CDVTimer][TotalPluginStartup] 7.552981ms
+2014-04-15 14:52:17.555 HelloCordova[2572:70b] Resetting plugins due to page load.
+2014-04-15 14:53:33.920 HelloCordova[2572:3f03] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2014-04-15 14:53:33.961 HelloCordova[2572:70b] Finished load of: file:///Users/ylzheng/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/36F80169-3018-419B-8B90-E1C5456B392F/HelloCordova.app/www/index.html
