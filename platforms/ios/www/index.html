@@ -40,13 +40,13 @@
                           can-swipe="true" can-reorder="true" can-delete="true"
                           delete-icon=""
                           on-delete="onTaskDelete(item)"
-                          on-reorder="onMoveTask(item, fromIndex, toIndex)"
-                          option-buttons="optionButtons"
-                        >
+                          on-reoder="onMoveTask(item, fromIndex, toIndex)"
+                          option-buttons="optionButtons">
 
                     <ion-item ng-repeat="task in activeProject.tasks"
-                              item="task" ng-class="{ completed: task.complete }">
+                              item="task" ng-class="{ completed: task.complete }" >
                         {{task.title}}
+
                     </ion-item>
                 </ion-list>
             </ion-content>
