@@ -35,11 +35,21 @@ angular.module('todo', ['ionic'])
         }
     })
     .controller('TodoCtrl', ["$scope", "$timeout" ,"$ionicModal", "$ionicSideMenuDelegate", "Projects", function($scope, $timeout, $ionicModal, $ionicSideMenuDelegate, Projects) {
-        $scope.tasks = [
-            { title: 'Collect coins' },
-            { title: 'Eat mushrooms' },
-            { title: 'Get high enough to grab the flag' },
-            { title: 'Find the Princess' }
+        $scope.itemButtons = [
+            {
+                text: 'Edit',
+                type: 'Button',
+                onTap: function(item) {
+                    alert('Edit Item: ' + item.id);
+                }
+            },
+            {
+                text: 'Share',
+                type: 'Button',
+                onTap: function(item) {
+                    alert('Share Item: ' + item.id);
+                }
+            }
         ];
 
         // A utility function for creating a new project
@@ -121,5 +131,14 @@ angular.module('todo', ['ionic'])
                 }
             }
         });
+
+        // Handler Task List Delete
+        $scope.onTaskDelete = function(item) {
+            $scope.activeProject.tasks.splice($scope.activeProject.tasks.indexOf(item), 1);
+        }
+
+        $scope.reordering = function() {
+
+        }
 
     }]);

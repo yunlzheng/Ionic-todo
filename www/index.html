@@ -34,9 +34,8 @@
             <ion-content scroll="false">
                 <!-- our list and list items -->
                 <ion-list can-delete="true" show-delete="showDelete" on-delete="onTaskDelete(item)">
-                    <ion-item class="item item-icon-right" ng-repeat="task in activeProject.tasks" item="task"
-                              option-buttons="itemButtons">
-                        {{task.title}}
+                    <ion-item class="item" ng-repeat="task in activeProject.tasks" item="task">
+                        <div>{{task.title}}</div>
                     </ion-item>
                 </ion-list>
             </ion-content>
