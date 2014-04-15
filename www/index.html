@@ -40,8 +40,10 @@
                 <!-- our list and list items -->
                 <ion-list show-delete="data.showDelete" show-reorder="data.showReorder"
                           can-swipe="true" can-reorder="true" can-delete="true"
+                          delete-icon=""
                           on-delete="onTaskDelete(item)"
                           on-reorder="onMoveTask(item, fromIndex, toIndex)"
+                          option-buttons="optionButtons"
                         >
 
                     <ion-item ng-repeat="task in activeProject.tasks"

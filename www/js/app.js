@@ -120,6 +120,23 @@ angular.module('todo', ['ionic'])
             }
         });
 
+        $scope.optionButtons = [
+            {
+                text: 'Edit',
+                type: 'button-assertive ',
+                onTap: function(item) {
+                    alert('Edit Item: ' + item.id);
+                }
+            },
+            {
+                text: 'Share',
+                type: 'Button',
+                onTap: function(item) {
+                    alert('Share Item: ' + item.id);
+                }
+            }
+        ];
+
         // Handler Task List Delete
         $scope.onTaskDelete = function(item) {
             $scope.activeProject.tasks.splice($scope.activeProject.tasks.indexOf(item), 1);
