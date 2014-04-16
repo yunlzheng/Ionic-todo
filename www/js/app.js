@@ -101,13 +101,18 @@ angular.module('todo', ['ionic'])
 
         $scope.closeNewTask = function() {
             $scope.taskModal.hide();
-        }
+        };
 
         $scope.toggleProjects = function() {
             $ionicSideMenuDelegate.toggleLeft();
             $scope.data.showDelete = false;
             $scope.data.showReorder = false;
             $scope.data.showProjectDelete = false;
+        };
+
+        $scope.onProjectDelete = function(project) {
+            $scope.projects.splice($scope.projects.indexOf(project), 1);
+            Projects.save($scope.projects);
         };
 
         // Try to create the first project, make sure to defer
@@ -141,10 +146,6 @@ angular.module('todo', ['ionic'])
                 }
             }
         ];
-
-        $scope.onProjectDelete = function(item) {
-            console.log(item);
-        }
 
         // Handler Task List Delete
         $scope.onTaskDelete = function(item) {
