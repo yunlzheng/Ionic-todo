@@ -37,7 +37,9 @@ angular.module('todo', ['ionic'])
     .controller('TodoCtrl', ["$scope", "$timeout" ,"$ionicModal", "$ionicSideMenuDelegate", "Projects", function($scope, $timeout, $ionicModal, $ionicSideMenuDelegate, Projects) {
 
         $scope.data = {
-            showDelete: false
+            showReorder: false,
+            showDelete: false,
+            showProjectDelete: false
         };
 
         // A utility function for creating a new project
@@ -103,6 +105,9 @@ angular.module('todo', ['ionic'])
 
         $scope.toggleProjects = function() {
             $ionicSideMenuDelegate.toggleLeft();
+            $scope.data.showDelete = false;
+            $scope.data.showReorder = false;
+            $scope.data.showProjectDelete = false;
         };
 
         // Try to create the first project, make sure to defer
@@ -136,6 +141,10 @@ angular.module('todo', ['ionic'])
                 }
             }
         ];
+
+        $scope.onProjectDelete = function(item) {
+            console.log(item);
+        }
 
         // Handler Task List Delete
         $scope.onTaskDelete = function(item) {

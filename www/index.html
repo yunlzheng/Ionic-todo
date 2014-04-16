@@ -39,7 +39,6 @@
                 <!-- our list and list items -->
                 <ion-list show-delete="data.showDelete" show-reorder="data.showReorder"
                           can-swipe="true" can-reorder="true" can-delete="true"
-                          delete-icon=""
                           on-delete="onTaskDelete(item)"
                           option-buttons="optionButtons">
 
@@ -55,13 +54,14 @@
         <!-- Left menu -->
         <ion-side-menu side="left">
             <ion-header-bar class="bar-calm">
+                <button class="button button-icon ion-ios7-minus-empty" ng-click="data.showProjectDelete=!data.showProjectDelete"></button>
                 <h1 class="title">Projects</h1>
                 <button class="button button-icon ion-ios7-plus-empty" ng-click="newProject()">
                 </button>
             </ion-header-bar>
             <ion-content scroll="false">
-                <ion-list>
-                    <ion-item ng-repeat="project in projects" ng-click="selectProject(project, $index)" ng-class="{active: activeProject == project}">
+                <ion-list show-delete="data.showProjectDelete" can-delete="true" on-delete="onProjectDelete(item)">
+                    <ion-item ng-repeat="project in projects" item="project" ng-click="selectProject(project, $index)" ng-class="{active: activeProject == project}">
                         {{project.title}}
                     </ion-item>
                 </ion-list>
