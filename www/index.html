@@ -18,7 +18,7 @@
 
         <!-- Center content -->
         <ion-side-menu-content>
-            <ion-header-bar class="bar-dark">
+            <ion-header-bar class="bar-stable">
                 <button class="button button-icon" ng-click="toggleProjects()">
                     <i class="icon ion-ios7-browsers-outline"></i>
                 </button>
@@ -35,12 +35,12 @@
                 </div>
             </ion-header-bar>
             <ion-content scroll="false">
+                <p ng-if="activeProject.tasks.length==0" class="task-empty">Empty Task List</p>
                 <!-- our list and list items -->
                 <ion-list show-delete="data.showDelete" show-reorder="data.showReorder"
                           can-swipe="true" can-reorder="true" can-delete="true"
                           delete-icon=""
                           on-delete="onTaskDelete(item)"
-
                           option-buttons="optionButtons">
 
                     <ion-item ng-repeat="task in activeProject.tasks"
