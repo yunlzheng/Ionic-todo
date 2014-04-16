@@ -4,3 +4,10 @@
     text-decoration: line-through;
     font-weight: bold;
 }
+
+.task-empty {
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 40px;
+    font-size: 15px;
+}
