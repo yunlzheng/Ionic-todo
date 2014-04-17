@@ -129,3 +129,4 @@ objc[1595]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.ap
 2014-04-16 10:10:49.477 TODO[1595:70b] [CDVTimer][TotalPluginStartup] 5.980968ms
 2014-04-16 10:10:49.552 TODO[1595:70b] Resetting plugins due to page load.
 2014-04-16 10:10:49.720 TODO[1595:70b] Finished load of: file:///Users/ylzheng/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/5ABF548F-5871-437B-B734-09C0CF65D85E/TODO.app/www/index.html
+Terminating in response to SpringBoard's termination.

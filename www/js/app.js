@@ -115,6 +115,10 @@ angular.module('todo', ['ionic'])
             Projects.save($scope.projects);
         };
 
+        $scope.isActiveProject = function(project) {
+            return $scope.projects.indexOf(project) == Projects.getLastActiveIndex();
+        }
+
         // Try to create the first project, make sure to defer
         // this by using $timeout so everything is initialized
         // properly
@@ -157,13 +161,13 @@ angular.module('todo', ['ionic'])
         function CompletedTask(task) {
             task.complete = !task.complete;
             Projects.save($scope.projects);
-        };
+        }
 
         function CleanTask(task) {
             $scope.activeProject.tasks.splice($scope.activeProject.tasks.indexOf(task), 1);
             // Inefficient, but save all the projects
             Projects.save($scope.projects);
-        };
+        }
 
         $scope.onMoveTask = function(item, fromIndex, toIndex) {
             $scope.activeProject.tasks.splice(fromIndex, 1);

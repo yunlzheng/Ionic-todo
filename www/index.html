@@ -40,10 +40,11 @@
                 <ion-list show-delete="data.showDelete" show-reorder="data.showReorder"
                           can-swipe="true" can-reorder="true" can-delete="true"
                           on-delete="onTaskDelete(item)"
-                          option-buttons="optionButtons">
+                          option-buttons="optionButtons"
+                          on-reoder="onMoveTask(item, fromIndex, toIndex)">
 
                     <ion-item ng-repeat="task in activeProject.tasks"
-                              item="task" ng-class="{ completed: task.complete }" on-reoder="onMoveTask(item, fromIndex, toIndex)" >
+                              item="task" ng-class="{ completed: task.complete }">
                         {{task.title}}
 
                     </ion-item>
@@ -61,7 +62,7 @@
             </ion-header-bar>
             <ion-content scroll="false">
                 <ion-list show-delete="data.showProjectDelete" can-delete="true" on-delete="onProjectDelete(item)">
-                    <ion-item ng-repeat="project in projects" item="project" ng-click="selectProject(project, $index)" ng-class="{active: activeProject == project}">
+                    <ion-item ng-repeat="project in projects" item="project" ng-click="selectProject(project, $index)" ng-class="{active: isActiveProject(project)}">
                         {{project.title}}
                     </ion-item>
                 </ion-list>
